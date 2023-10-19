@@ -147,7 +147,7 @@
             endif
           -%}
           <div
-            class="footer__blocks-wrapper grid grid--1-col grid--2-col grid--4-col-tablet {{ footer_grid_class }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+            class="footer__blocks-wrapper page-width grid grid--1-col grid--2-col grid--4-col-tablet {{ footer_grid_class }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
             {% if settings.animations_reveal_on_scroll %}
               data-cascade
             {% endif %}
@@ -251,7 +251,7 @@
   {%- endif -%}
   {% if section.settings.newsletter_enable_bottom %}
   <div
-          class="footer-block--newsletter{% if settings.animations_reveal_on_scroll %} color-{{ section.settings.color_scheme_menu }} scroll-trigger animate--slide-in{% endif %}{% if section.settings.newsletter_enable_bottom %} newsletter_enable_bottom{% endif %}"
+          class="page-width surbhi_custom_branch footer-block--newsletter{% if settings.animations_reveal_on_scroll %} color-{{ section.settings.color_scheme_menu }} scroll-trigger animate--slide-in{% endif %}{% if section.settings.newsletter_enable_bottom %} newsletter_enable_bottom{% endif %}"
           {% if settings.animations_reveal_on_scroll %}
             data-cascade
           {% endif %}
@@ -422,20 +422,7 @@
           </localization-form>
         {%- endif -%}
       </div>
-      <div class="footer__column footer__column--info">
-        {%- if section.settings.payment_enable -%}
-          <div class="footer__payment">
-            <span class="visually-hidden">{{ 'sections.footer.payment' | t }}</span>
-            <ul class="list list-payment" role="list">
-              {%- for type in shop.enabled_payment_types -%}
-                <li class="list-payment__item">
-                  {{ type | payment_type_svg_tag: class: 'icon icon--full-color' }}
-                </li>
-              {%- endfor -%}
-            </ul>
-          </div>
-        {%- endif -%}
-      </div>
+     
     </div>
     <div class="footer__content-bottom-wrapper page-width{% if section.settings.enable_country_selector == false and section.settings.enable_language_selector == false %} footer__content-bottom-wrapper--center{% endif %}">
       <div class="footer__copyright caption">
