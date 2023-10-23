@@ -165,7 +165,7 @@
                 {% endif %}
               >
                 {%- if block.settings.heading != blank -%}
-                  <h2 class="footer-block__heading mobile_accordian_css inline-richtext" onclick="toggle_mobile_view()">{{- block.settings.heading -}}</h2>
+                  <h2 class="footer-block__heading mobile_accordian_css inline-richtext" onclick="toggle_mobile_view(this)">{{- block.settings.heading -}}</h2>
                 {%- endif -%}
 
                 {%- case block.type -%}
@@ -212,7 +212,7 @@
                         </div>
                       {%- endif -%}
                       {%- if settings.brand_headline != blank -%}
-                        <h2 class="footer-block__heading rte mobile_accordian_css" onclick="toggle_mobile_view()">{{ settings.brand_headline }}</h2>
+                        <h2 class="footer-block__heading rte mobile_accordian_css" onclick="toggle_mobile_view(this)">{{ settings.brand_headline }}</h2>
                       {%- endif -%}
                   <div class="accordion-content"
                       {%- if settings.brand_description != blank -%}

@@ -512,14 +512,33 @@
     padding: 0px;
     margin: 10px 0px;
 }
+@media screen and (min-width: 750px){
 .footer-block__newsletter h2 , .footer-block__newsletter form {
     display: inline-block;
     margin-bottom: 0px;
     margin-right: 100px;
 }
+}
 .footer-bottom-copyright{
   display:flex;
   padding:0px;
+}
+@media screen and (max-width: 750px){
+.accordion-content
+{
+  display:none;
+}
+  .footer-bottom-copyright {
+    display: block;
+    padding: 0;
+}
+  .footer__localization:empty+.footer__column--info {
+    align-items: center;
+}
+  .newsletter_align {
+    display: block;
+  }
+ 
 }
 
 
